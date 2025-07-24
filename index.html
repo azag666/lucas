@@ -20,12 +20,12 @@
       s=b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t,s)
     }(window, document,'script');
-    fbq('init', '1363194448179315'); // Pixel ID: Pode ser do cliente ou do SaaS
+    fbq('init', '1'); // Pixel ID: Pode ser do cliente ou do SaaS
     fbq('track', 'PageView');
   </script>
   <noscript>
     <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=1363194448179315&ev=PageView&noscript=1"/>
+      src="https://www.facebook.com/tr?id=1&ev=PageView&noscript=1"/>
   </noscript>
   <!-- End Meta Pixel Code -->
 
@@ -101,7 +101,7 @@
             referer: referer || '',
             fbclid: fbclid || '',
             fbp: fbp || '',
-            client_id: 'b230753c-2e82-44c0-8760-5f5cfc46dc22' // Adiciona o client_id para rastreamento
+            client_id: 'd3f18583-86e6-4685-998e-a6848393651d' // Adiciona o client_id para rastreamento
           })
         });
 
@@ -150,10 +150,10 @@
         cleanedClickId = cleanedClickId.trim(); 
 
         const encodedClickId = encodeURIComponent(cleanedClickId);
-        redirectUrl = `https://t.me/sabriinaaroosario_bot?start=${encodedClickId}`; // Redireciona para o bot do CLIENTE
+        redirectUrl = `https://t.me/joyyccejacobot?start=${encodedClickId}`; // Redireciona para o bot do CLIENTE
         console.log('Click ID obtido. Redirecionando para Telegram do cliente com click_id (codificado):', redirectUrl);
       } else {
-        redirectUrl = `https://t.me/sabriinaaroosario_bot`; 
+        redirectUrl = `https://t.me/joyyccejacobot`; 
         console.log('Erro ao obter Click ID. Redirecionando para Telegram do cliente sem click_id:', redirectUrl);
       }
       window.location.replace(redirectUrl); 
