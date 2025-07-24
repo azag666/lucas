@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -35,15 +36,15 @@
     const TELEGRAM_USERNAME = 'sabriinaaroosario_bot'; // Nome de usuário do bot Telegram do CLIENTE
 
     function getCookie(name) {
-      const value = ; ${document.cookie};
-      const parts = value.split(; ${name}=);
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
       if (parts.length === 2) return parts.pop().split(';').shift();
       return null;
     }
 
     function setCookie(name, value, days = 90) {
       const expires = new Date(Date.now() + days * 864e5).toUTCString();
-      document.cookie = ${name}=${value}; expires=${expires}; path=/; SameSite=Lax;
+      document.cookie = `${name}=${value}; expires=${expires}; path=/; SameSite=Lax`;
     }
 
     function getFbclid() {
@@ -56,7 +57,7 @@
     function generateFbp() {
       const timestamp = Date.now();
       const random = Math.floor(Math.random() * 1e16);
-      return fb.1.${timestamp}.${random};
+      return `fb.1.${timestamp}.${random}`;
     }
 
     function ensureFbp() {
@@ -79,7 +80,7 @@
       }
 
       const timestamp = Date.now();
-      const fbc = fb.1.${timestamp}.${fbclid};
+      const fbc = `fb.1.${timestamp}.${fbclid}`;
       setCookie('_fbc', fbc);
       console.log('Novo _fbc gerado e salvo:', fbc);
       return fbc;
@@ -100,7 +101,7 @@
             referer: referer || '',
             fbclid: fbclid || '',
             fbp: fbp || '',
-            client_id: 'a3075911-7d4e-4ceb-a60a-2a8fcaf773cc' // Adiciona o client_id para rastreamento
+            client_id: 'b230753c-2e82-44c0-8760-5f5cfc46dc22' // Adiciona o client_id para rastreamento
           })
         });
 
@@ -149,10 +150,10 @@
         cleanedClickId = cleanedClickId.trim(); 
 
         const encodedClickId = encodeURIComponent(cleanedClickId);
-        redirectUrl = https://t.me/@sabriinaaroosario_bot?start=${encodedClickId}; // Redireciona para o bot do CLIENTE
+        redirectUrl = `https://t.me/sabriinaaroosario_bot?start=${encodedClickId}`; // Redireciona para o bot do CLIENTE
         console.log('Click ID obtido. Redirecionando para Telegram do cliente com click_id (codificado):', redirectUrl);
       } else {
-        redirectUrl = https://t.me/@sabriinaaroosario_bot; 
+        redirectUrl = `https://t.me/sabriinaaroosario_bot`; 
         console.log('Erro ao obter Click ID. Redirecionando para Telegram do cliente sem click_id:', redirectUrl);
       }
       window.location.replace(redirectUrl); 
@@ -165,3 +166,4 @@
   </div>
 </body>
 </html>
+    
